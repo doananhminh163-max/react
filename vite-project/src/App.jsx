@@ -1,33 +1,47 @@
-import { useState } from 'react'
+import TodoNew from './components/todos/TodoNew'
+import TodoData from './components/todos/TodoData'
+import Header from './components/layouts/header'
+import Footer from './components/layouts/footer'
+import './components/todos/todo.css'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [todoList, setTodoList] = useState([]);
+
+  const addNewTodo = (name) => {
+    const newTodo = {
+      id: Date.now(),
+      name: name
+    }
+    setTodoList([...todoList, newTodo])
+  }
+
+  const deleteTodo = (id) => {
+    const newTodoList = todoList.filter(item => item.id !== id)
+    setTodoList(newTodoList)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className="container-todo">
+        <TodoNew
+          addNewTodo={addNewTodo}
+        />
+        <TodoData
+          todoList={todoList}
+          deleteTodo={deleteTodo}
+        />
+        {todoList.length === 0 &&
+          <div className="d-flex justify-content-center mt-4">
+            <img src={reactLogo} className="react-logo" alt="React Logo" />
+          </div>
+        }
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Outlet />
+      <Footer />
     </>
   )
 }

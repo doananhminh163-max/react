@@ -1,0 +1,105 @@
+/* =========================================================
+   Premium Modern Footer
+   ========================================================= */
+
+.premium-footer {
+    background: linear-gradient(135deg, #1a1c22 0%, #292c36 100%);
+    color: #e0e6ed;
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+    margin-top: 4rem;
+}
+
+/* --- Footer Headings --- */
+.footer-heading {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #0d6efd;
+    border-radius: 2px;
+}
+
+/* --- Footer Links --- */
+.footer-link {
+    color: #aeb4c0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.2rem 0;
+    position: relative;
+}
+
+.footer-link:hover {
+    color: #0d6efd;
+    transform: translateX(5px);
+}
+
+/* --- Social Icons Buttons --- */
+.social-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: monospace;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon-btn:hover {
+    background: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-3px);
+    border-color: #0d6efd;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* --- Form Input --- */
+.premium-footer .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.premium-footer .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.premium-footer .form-control::placeholder {
+    color: #8c93a1;
+}
+
+/* --- Copyright Area --- */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.footer-text {
+    color: #8c93a1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

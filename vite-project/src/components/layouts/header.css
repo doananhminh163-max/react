@@ -1,0 +1,95 @@
+/* =========================================================
+   Premium Glassmorphism Header
+   ========================================================= */
+
+.premium-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    padding: 0.8rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Brand Logo --- */
+.brand-logo {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    color: #2b2b2b;
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+    color: #2b2b2b;
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* --- Navigation Links --- */
+.custom-nav-link {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #555 !important;
+    position: relative;
+    padding: 0.5rem 0.2rem !important;
+    transition: color 0.3s ease;
+}
+
+.custom-nav-link:hover,
+.nav-link.active.custom-nav-link {
+    color: #0d6efd !important;
+}
+
+/* Underline Animation Effect */
+.custom-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0d6efd;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.custom-nav-link:hover::after,
+.nav-link.active.custom-nav-link::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* --- Contact Button --- */
+.custom-btn-contact {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
+    border: none;
+}
+
+.custom-btn-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+    .premium-header {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-collapse {
+        background: #ffffff;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-top: 1rem;
+    }
+
+    .custom-nav-link::after {
+        display: none;
+        /* Hide animated underline on mobile menus */
+    }
+}

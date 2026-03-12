@@ -1,0 +1,33 @@
+.container-todo {
+    width: 600px;
+    margin: auto auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+.react-logo {
+    height: 10em;
+    will-change: filter;
+    transition: filter 300ms;
+    animation: logo-spin infinite 20s linear;
+}
+
+.react-logo:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
